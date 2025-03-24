@@ -136,13 +136,13 @@ body {
     margin-top: 20px;
 }
 
-.welcome-section, .welcome-section2 h2 {
+.welcome-section h2 {
     font-size: 24px;
     margin-bottom: 15px;
     color: black;
 }
 
-.welcome-section, .welcome-section2 p {
+.welcome-section p {
     font-size: 16px;
     margin-bottom: 20px;
     color: black;
