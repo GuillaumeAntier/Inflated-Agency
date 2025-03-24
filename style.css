@@ -118,3 +118,55 @@
         right: -3px;
         transform: rotate(45deg);
     }
+
+    /* Hero Section */
+    .welcome-section {
+        background-color: var(--white);
+        border-radius: 15px;
+        padding: 50px 50px;
+        color: var(--white);
+        margin: 40px;
+    }
+  
+    .welcome-section h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: black;
+    }
+    
+    .welcome-section p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: black;
+    }
+    
+    .welcome-buttons {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .primary-btn {
+        background-color: var(--primary-color);
+        color: var(--white);
+    }
+    
+    .outline-btn {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+    
+    .centered-btn {
+        display: block;
+        margin: 20px auto;
+        width: fit-content;
+    }
