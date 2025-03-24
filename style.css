@@ -74,6 +74,7 @@
         color: var(--dark-gray);
         text-decoration: none;
         padding: 0 10px;
+        font-size: 15px;
     }
 
     .menu button{
@@ -135,13 +136,13 @@
         margin-top: 20px;
     }
   
-    .welcome-section h2 {
+    .welcome-section, .welcome-section2 h2 {
         font-size: 24px;
         margin-bottom: 15px;
         color: black;
     }
     
-    .welcome-section p {
+    .welcome-section, .welcome-section2 p {
         font-size: 16px;
         margin-bottom: 20px;
         color: black;
