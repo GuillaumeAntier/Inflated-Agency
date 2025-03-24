@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CultuRéseau - Explorez la diversité culturelle</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./explore.css">
   <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,9 +16,9 @@
       <h1 class="app-name">CultuRéseau</h1>
     </div>
     <div class="menu">
-        <button><a href="" id="active">Accueil</a></button>
+        <button><a href="main.html">Accueil</a></button>
         <button><a href="">Evenements</a></button>
-        <button><a href="">Explorer</a></button>
+        <button><a href="" id="active">Explorer</a></button>
         <button><a href="">Lieux</a></button>
         <button><a href="">Magazine</a></button>
     </div>
@@ -29,14 +30,72 @@
     </div>
   </header>
 
-  <section class="welcome-section">
-    <h2>Bienvenue sur CultuRéseau</h2>
-    <p>Explorez, partagez et célébrez la diversité culturelle à travers le monde.</p>
-    <p>Rejoignez notre communauté pour découvrir des événements culturels, des lieux et des articles sur les cultures du monde.</p>
-    <div class="welcome-buttons">
-      <button class="btn primary-btn">Explorer les cultures</button>
-      <button class="btn outline-btn">Découvrir les événements</button>
-    </div>
+  <section class="welcome-section2">
+    <h2 class="welcome-title">Explorez les cultures</h2>
+    <p>Découvrez la richesse et la diversité des traditions culturelles du monde</p>
+  </section>
+  <section class="main-content">
+    
+  
+    <!-- Section des filtres -->
+    <section class="filter-section">
+      <h3>Filtres</h3>
+      
+      <!-- Type de contenus -->
+      <div class="filter-group">
+        <h4>Type de contenus</h4>
+        <label>
+          <input type="checkbox" name="content-type" value="articles"> Articles
+        </label>
+        <label>
+          <input type="checkbox" name="content-type" value="videos"> Vidéos
+        </label>
+        <label>
+          <input type="checkbox" name="content-type" value="podcasts"> Podcasts
+        </label>
+        <label>
+            <input type="checkbox" name="content-type" value="photos"> Galeries photos
+        </label>
+      </div>
+    
+      <!-- Région -->
+      <div class="filter-group">
+        <h4>Région</h4>
+        <label for="region">Choisissez une région :</label>
+        <select id="region" name="region">
+            <option value="toutes les régions">Toutes les régions</option>
+            <option value="europe">Europe</option>
+            <option value="asie">Asie</option>
+            <option value="afrique">Afrique</option>
+            <option value="amerique">Amérique</option>
+        </select>
+      </div>
+    
+      <!-- Thématique -->
+      <div class="filter-group">
+        <h4>Thématique</h4>
+        <label>
+          <input type="checkbox" name="theme" value="art"> Art 
+        </label>
+        <label>
+          <input type="checkbox" name="theme" value="musique"> Musique
+        </label>
+        <label>
+          <input type="checkbox" name="theme" value="gastronomie"> Gastronomie
+        </label>
+        <label>
+          <input type="checkbox" name="theme" value="histoire"> Histoire
+        </label>
+      </div>
+    
+      <button type="submit">Appliquer</button>
+      
+    </section>
+    <!-- Section centrale (à ajouter plus tard) -->
+    <div class="central-section">
+        <h2>Section centrale</h2>
+        <p>Contenu principal ici...</p>
+      </div>
   </section>
 </body>
 </html>
