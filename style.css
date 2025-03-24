@@ -45,6 +45,16 @@ body {
     margin-right: -3%;
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -70,20 +80,21 @@ body {
     justify-content: space-between;
 }
 
-.menu a {
-    color: var(--dark-gray);
-    text-decoration: none;
-    padding: 0 10px;
-    font-size: 15px;
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.menu button {
-    background-color: var(--white);
-    color: var(--white);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-size: 14px;
 }
 
 #active {
@@ -292,6 +303,14 @@ body {
     height: 210px;
 }
 
+.event-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+
 .event-img {
     height: 100px;
     padding: 25px;
@@ -345,8 +364,8 @@ body {
 }
 
 .full {
-    background-color: var(--gray);
-    color: var(--dark-gray);
+    background-color: var(--light-gray);
+    color: var(--red);
 }
     /* Footer */
     .footer {
