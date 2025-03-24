@@ -192,11 +192,11 @@
         gap: 25px;
         overflow-x: auto;
         padding-bottom: 10px;
-        justify-content: center;
+        justify-content: space-between;
     }    
     .category-card {
         position: relative;
-        width: 310px;
+        width: 19%;
         height: 200px;
         background-color: var(--white);
         border: 1px solid var(--gray);
@@ -278,6 +278,7 @@
 .event-cards {
     display: flex;
     gap: 20px;
+    justify-content: space-between;
   }
   
   .event-card {
@@ -286,7 +287,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 10px;
-    width: 300px;
+    width: 19%;
     height: 210px;
   }
   
