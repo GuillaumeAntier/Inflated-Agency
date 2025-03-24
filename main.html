@@ -15,19 +15,20 @@
       <h1 class="app-name">CultuRéseau</h1>
     </div>
     <nav class="menu">
-        <ul>
-          <li><a href="" id="active">Accueil</a></li>
-          <li><a href="">Evenements</a></li>
-          <li><a href="explore.html">Explorer</a></li>
-          <li><a href="">Lieux</a></li>
-          <li><a href="">Magazine</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="" id="active">Accueil</a></li>
+        <li><a href="">Evenements</a></li>
+        <li><a href="explore.html">Explorer</a></li>
+        <li><a href="">Lieux</a></li>
+        <li><a href="">Magazine</a></li>
+      </ul>
+    </nav>
     <div class="search-bar">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30" class="search-icon">
         <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
       </svg>
-      <input type="text" placeholder="Rechercher...">
+        <!-- <label for="search" class="sr-only" >Rechercher</label> -->
+        <input type="text" placeholder="Rechercher...">
     </div>
   </header>
 
@@ -45,50 +46,60 @@
   <section class="categories-section">
     <h2 class="section-title">Catégories populaires</h2>
     <div class="categories-container">
-      <a href="#" class="category-card">
-        <div class="category-img gastro">
-          <span>GASTRONOMIE</span>
-        </div>
-        <div class="category-infos">
-          <h3>Gastro</h3>
-          <p>15 Articles</p>
-        </div>
-      </a>
-      <a href="#" class="category-card">
-        <div class="category-img traditions">
-          <span>TRADITION</span>
-        </div>
-        <div class="category-infos">
-          <h3>Traditions</h3>
-          <p>12 Articles</p>
-        </div>
-      </a>
-      <a href="#" class="category-card">
-        <div class="category-img musique">
-          <span>MUSIQUE</span>
-        </div>
-        <div class="category-infos">
-          <h3>Musique</h3>
-          <p>10 Articles</p>
-        </div>
-      </a>
-      <a href="#" class="category-card">
-        <div class="category-img festival">
-          <span>FESTIVAL</span>
-        </div>
-        <div class="category-infos">
-          <h3>Festival</h3>
-          <p>78 Articles</p>
-        </div>
-      </a>
-      <a href="#" class="category-all">
-        <span>Voir toutes les catégories</span>
-      </a>
+      <article class="category-card">
+        <a href="#">
+          <div class="category-img gastro">
+            <span>GASTRONOMIE</span>
+          </div>
+          <div class="category-infos">
+            <h3>Gastronomie</h3>
+            <p>15 Articles</p>
+          </div>
+        </a>
+      </article>
+      <article class="category-card">
+        <a href="#">
+          <div class="category-img traditions">
+            <span>TRADITION</span>
+          </div>
+          <div class="category-infos">
+            <h3>Traditions</h3>
+            <p>12 Articles</p>
+          </div>
+        </a>
+      </article>
+      <article class="category-card">
+        <a href="#">
+          <div class="category-img musique">
+            <span>MUSIQUE</span>
+          </div>
+          <div class="category-infos">
+            <h3>Musique</h3>
+            <p>10 Articles</p>
+          </div>
+        </a>
+      </article>
+      <article class="category-card">
+        <a href="#">
+          <div class="category-img festival">
+            <span>FESTIVAL</span>
+          </div>
+          <div class="category-infos">
+            <h3>Festival</h3>
+            <p>78 Articles</p>
+          </div>
+        </a>
+      </article>
+      <article class="category-all">
+        <a href="#">
+          <span>Voir toutes les catégories</span>
+        </a>
+      </article>
     </div>
   </section>
 
   <!-- Événements à venir -->
-<section class="events-section">
+  <section class="events-section">
     <h2 class="section-title">Événements à venir</h2>
     <div class="event-cards">
       <article class="event-card">
@@ -101,7 +112,7 @@
           <span class="event-status available">Places disponibles</span>
         </a>
       </article>
-  
+
       <article class="event-card">
         <a href="#">
           <div class="event-img red">
@@ -112,7 +123,7 @@
           <span class="event-status available">Places disponibles</span>
         </a>
       </article>
-  
+
       <article class="event-card">
         <a href="#">
           <div class="event-img green">
@@ -123,7 +134,7 @@
           <span class="event-status full">Complet</span>
         </a>
       </article>
-  
+
       <article class="event-card">
         <a href="#">
           <div class="event-img amber">
@@ -134,7 +145,7 @@
           <span class="event-status available">Places disponibles</span>
         </a>
       </article>
-  
+
       <article class="event-card">
         <a href="#">
           <div class="event-img turquoise">
@@ -148,21 +159,20 @@
     </div>
     <button class="btn primary-btn centered-btn">Voir tous les événements</button>
   </section>
-  <!-- Footer -->
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-link">
-        <ul>
-            <li><p>© 2025 CultuRéseau - Tous droits réservés</p></li>
-            <li><a href="#">A propos</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Confidentialité</a></li>
-            <li><a href="#">Condition d'utilisation</a></li>
-            <li><a href="#">Accessibilité</a></li>
-            <li><a href="#">Plan du site</a></li>
-        </ul>
+      <ul>
+        <li><p>© 2025 CultuRéseau - Tous droits réservés</p></li>
+        <li><a href="#">A propos</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">Condition d'utilisation</a></li>
+        <li><a href="#">Accessibilité</a></li>
+        <li><a href="#">Plan du site</a></li>
+      </ul>
     </div>
-    
-</footer>
+  </footer>
 </body>
 </html>
