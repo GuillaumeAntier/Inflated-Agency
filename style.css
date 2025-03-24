@@ -10,6 +10,8 @@
         background-color: #f5f5f5;
         color: #000000;
         line-height: 1.6;
+        margin-left: 3%;
+        margin-right: 3%;
     }
     
     /* Variables des couleurs */
@@ -24,6 +26,7 @@
         --gray: #dddddd;
         --dark-gray: #555555;
         --text-gray: #777777;
+        --red : #B30000;
     }
     
     /* Header */
@@ -38,11 +41,14 @@
         position: sticky;
         top: 0;
         z-index: 100;
+        margin-left: -3%;
+        margin-right: -3%;
     }
     
     .logo {
         display: flex;
         align-items: center;
+        margin-left: 3%;
     }
     
     .logo-circle {
@@ -87,6 +93,7 @@
   /* Barre de recherche */
     .search-bar {
         position: relative;
+        margin-right: 3%;
     }
     
     .search-bar input {
@@ -125,7 +132,7 @@
         border-radius: 15px;
         padding: 50px 50px;
         color: var(--white);
-        margin: 40px;
+        margin-top: 20px;
     }
   
     .welcome-section h2 {
@@ -169,4 +176,99 @@
         display: block;
         margin: 20px auto;
         width: fit-content;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    /* Catégories */
+    .categories-container {
+        display: flex;
+        gap: 25px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        justify-content: center;
+    }    
+    .category-card {
+        position: relative;
+        width: 310px;
+        height: 200px;
+        background-color: var(--white);
+        border: 1px solid var(--gray);
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .category-img {
+        position: relative;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--white);
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .category-img span {
+        position: absolute;
+        top : 0;
+        left: 0;
+        padding: 20px;
+        letter-spacing: 0.5px;
+    }
+    
+    .gastro {
+        background-color: var(--amber);
+    }
+    
+    .traditions {
+        background-color: var(--red);
+    }
+    
+    .musique {
+        background-color: var(--green);
+    }
+
+    .festival {
+        background-color: var(--turquoise);
+    }
+
+    .category-infos {
+        justify-content: space-between;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .category-infos h3{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .category-infos p {
+        font-size: 12px;
+        color: var(--primary-color);
+    }
+
+    .category-all{
+        width: 310px;
+        height: 200px;
+        background-color: var(--white);
+        border: 1px solid var(--gray);
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
