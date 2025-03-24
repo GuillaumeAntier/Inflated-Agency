@@ -1,288 +1,288 @@
-    /* Reset CSS */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        color: #000000;
-        line-height: 1.6;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-    
-    /* Variables des couleurs */
-    :root {
-        --primary-color: #0052A5;
-        --purple: #6A0DAD;
-        --green: #4D8C23;
-        --amber: #B37400;
-        --turquoise: #008B8B; /* Nouvelle couleur ajoutée */
-        --white: #ffffff;
-        --light-gray: #f5f5f5;
-        --gray: #dddddd;
-        --dark-gray: #555555;
-        --text-gray: #777777;
-        --red : #B30000;
-    }
-    
-    /* Header */
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
-        padding: 0 15px;
-        background-color: var(--white);
-        border-bottom: 1px solid var(--gray);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        margin-left: -3%;
-        margin-right: -3%;
-    }
-    
-    .logo {
-        display: flex;
-        align-items: center;
-        margin-left: 3%;
-    }
-    
-    .logo-circle {
-        width: 30px;
-        height: 30px;
-        background-color: var(--primary-color);
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-    
-    .app-name {
-        font-size: 18px;
-        font-weight: bold;
-    }
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .menu{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #000000;
+    line-height: 1.6;
+    margin-left: 3%;
+    margin-right: 3%;
+}
 
-    .menu a{
-        color: var(--dark-gray);
-        text-decoration: none;
-        padding: 0 10px;
-        font-size: 15px;
-    }
+/* Variables des couleurs */
+:root {
+    --primary-color: #0052A5;
+    --purple: #6A0DAD;
+    --green: #4D8C23;
+    --amber: #B37400;
+    --turquoise: #008B8B; /* Nouvelle couleur ajoutée */
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --gray: #dddddd;
+    --dark-gray: #555555;
+    --text-gray: #777777;
+    --red: #B30000;
+}
 
-    .menu button{
-        background-color: var(--white);
-        color: var(--white);
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-left: -3%;
+    margin-right: -3%;
+}
 
-    #active{
-        font-weight: bold;
-        color : var(--primary-color);
-    }
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+}
 
-  /* Barre de recherche */
-    .search-bar {
-        position: relative;
-        margin-right: 3%;
-    }
-    
-    .search-bar input {
-        width: 100%;
-        height: 40px;
-        background-color: var(--light-gray);
-        border: 1px solid var(--gray);
-        border-radius: 20px;
-        padding: 0 15px 0 40px;
-        font-size: 14px;
-    }
-    
-    .search-icon {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 16px;
-    }
-    
-    .search-icon::after {
-        content: "";
-        position: absolute;
-        width: 6px;
-        height: 1.5px;
-        background: var(--dark-gray);
-        bottom: -4px;
-        right: -3px;
-        transform: rotate(45deg);
-    }
+.logo-circle {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 10px;
+}
 
-    /* Hero Section */
-    .welcome-section {
-        background-color: var(--white);
-        border-radius: 15px;
-        padding: 50px 50px;
-        color: var(--white);
-        margin-top: 20px;
-    }
-  
-    .welcome-section, .welcome-section2 h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        color: black;
-    }
-    
-    .welcome-section, .welcome-section2 p {
-        font-size: 16px;
-        margin-bottom: 20px;
-        color: black;
-    }
-    
-    .welcome-buttons {
-        display: flex;
-        gap: 10px;
-    }
-    
-    .btn {
-        padding: 10px 20px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .primary-btn {
-        background-color: var(--primary-color);
-        color: var(--white);
-    }
-    
-    .outline-btn {
-        background-color: transparent;
-        border: 2px solid var(--primary-color);
-        color: var(--primary-color);
-    }
-    
-    .centered-btn {
-        display: block;
-        margin: 20px auto;
-        width: fit-content;
-    }
+.app-name {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-    /* Section Titles */
-    .section-title {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-    
-    /* Catégories */
-    .categories-container {
-        display: flex;
-        gap: 25px;
-        overflow-x: auto;
-        padding-bottom: 10px;
-        justify-content: space-between;
-    }    
-    .category-card {
-        position: relative;
-        width: 19%;
-        height: 200px;
-        background-color: var(--white);
-        border: 1px solid var(--gray);
-        border-radius: 10px;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    .category-img {
-        position: relative;
-        height: 140px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: var(--white);
-        font-size: 13px;
-        font-weight: bold;
-    }
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    .category-img span {
-        position: absolute;
-        top : 0;
-        left: 0;
-        padding: 20px;
-        letter-spacing: 0.5px;
-    }
-    
-    .gastro {
-        background-color: var(--amber);
-    }
-    
-    .traditions {
-        background-color: var(--red);
-    }
-    
-    .musique {
-        background-color: var(--green);
-    }
+.menu a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 15px;
+}
 
-    .festival {
-        background-color: var(--turquoise);
-    }
+.menu button {
+    background-color: var(--white);
+    color: var(--white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .category-infos {
-        justify-content: space-between;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        padding: 0 10px;
-    }
+#active {
+    font-weight: bold;
+    color: var(--primary-color);
+}
 
-    .category-infos h3{
-        font-size: 12px;
-        font-weight: bold;
-    }
-    
-    .category-infos p {
-        font-size: 12px;
-        color: var(--primary-color);
-    }
+/* Barre de recherche */
+.search-bar {
+    position: relative;
+    margin-right: 3%;
+}
 
-    .category-all{
-        width: 310px;
-        height: 200px;
-        background-color: var(--white);
-        border: 1px solid var(--gray);
-        border-radius: 10px;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.search-bar input {
+    width: 100%;
+    height: 40px;
+    background-color: var(--light-gray);
+    border: 1px solid var(--gray);
+    border-radius: 20px;
+    padding: 0 15px 0 40px;
+    font-size: 14px;
+}
 
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+.search-icon::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 1.5px;
+    background: var(--dark-gray);
+    bottom: -4px;
+    right: -3px;
+    transform: rotate(45deg);
+}
+
+/* Hero Section */
+.welcome-section {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 50px 50px;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.welcome-section, .welcome-section2 h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.welcome-section, .welcome-section2 p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.welcome-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.outline-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.centered-btn {
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Catégories */
+.categories-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.category-card {
+    position: relative;
+    width: 19%;
+    height: 200px;
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.category-img {
+    position: relative;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.category-img span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    letter-spacing: 0.5px;
+}
+
+.gastro {
+    background-color: var(--amber);
+}
+
+.traditions {
+    background-color: var(--red);
+}
+
+.musique {
+    background-color: var(--green);
+}
+
+.festival {
+    background-color: var(--turquoise);
+}
+
+.category-infos {
+    justify-content: space-between;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.category-infos h3 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.category-infos p {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.category-all {
+    width: 310px;
+    height: 200px;
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Événements */
 .event-cards {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-  }
-  
-  .event-card {
+}
+
+.event-card {
     background-color: var(--white);
     border: 1px solid var(--gray);
     border-radius: 10px;
@@ -290,61 +290,61 @@
     margin-bottom: 10px;
     width: 19%;
     height: 210px;
-  }
-  
-  .event-img {
+}
+
+.event-img {
     height: 100px;
     padding: 25px;
-  }
-  
-  .turquoise {
+}
+
+.turquoise {
     background-color: var(--turquoise);
-  }
-  
-  .red {
+}
+
+.red {
     background-color: var(--red);
-  }
+}
 
-  .green {
+.green {
     background-color: var(--green);
-  }
+}
 
-    .amber {
-        background-color: var(--amber);
-    }
-  
-  .event-type, .article-category {
+.amber {
+    background-color: var(--amber);
+}
+
+.event-type, .article-category {
     color: var(--white);
     font-size: 14px;
     font-weight: bold;
-  }
-  
-  .event-title {
+}
+
+.event-title {
     font-size: 16px;
     font-weight: bold;
     padding: 10px 15px 5px;
-  }
-  
-  .event-details {
+}
+
+.event-details {
     font-size: 12px;
     color: var(--dark-gray);
     padding: 0 15px 10px;
-  }
-  
-  .event-status {
+}
+
+.event-status {
     display: inline-block;
     font-size: 10px;
     padding: 4px 10px;
     border-radius: 9px;
     margin: 5px 15px 15px;
-  }
-  
-  .available {
+}
+
+.available {
     background-color: var(--light-gray);
     color: var(--primary-color);
-  }
-  
-  .full {
+}
+
+.full {
     background-color: var(--gray);
     color: var(--dark-gray);
-  }
+}
