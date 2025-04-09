@@ -24,6 +24,8 @@ CultuRéseau/ ├── main.html # Main homepage ├── explore.html # Explo
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/CultuRéseau.git
+```
+
 2. Open the project in your preferred code editor
 3. Launch the application by opening main.html in a web browser
 ## Browser Compatibility
