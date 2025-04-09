@@ -52,38 +52,8 @@
   border-radius: 8px;
 }
 
-/* Menu de navigation principal */
-.menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
 
-.menu li {
-  margin: 0;
-  padding: 0;
-}
 
-.menu a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: var(--dark-gray);
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.menu a:hover,
-.menu a:focus {
-  background-color: var(--light-gray);
-  color: var(--primary-color);
-}
-
-.menu a[aria-current="page"] {
-  background-color: var(--primary-color);
-  color: var(--white);
-}
 
 /* Section des filtres */
 .filter-section {

@@ -28,7 +28,12 @@ body {
     --text-gray: #777777;
     --red: #B30000;
 }
+.menu a[aria-current="page"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
 
+  
 /* Header */
 .header {
     display: flex;
@@ -74,30 +79,33 @@ body {
     font-weight: bold;
 }
 
+/* Menu de navigation principal */
 .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu ul {
-    display: flex;
     list-style: none;
-    padding: 0;
+    display: flex;
     margin: 0;
-    gap: 20px;
-}
-
-.menu li {
-    margin: 0 10px;
-}
-
-.menu a {
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px 15px;
     text-decoration: none;
     color: var(--dark-gray);
-    font-size: 14px;
-}
-
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .menu a:hover,
+  .menu a:focus {
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+  }
 #active {
     font-weight: bold;
     color: var(--primary-color);
