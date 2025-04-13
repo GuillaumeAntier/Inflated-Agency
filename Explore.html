@@ -9,93 +9,205 @@
   <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
   <!-- Header -->
   <header class="header">
     <div class="logo">
-      <div class="logo-circle"></div>
+      <div class="logo-circle" aria-hidden="true"></div>
       <h1 class="app-name">CultuRéseau</h1>
     </div>
-    <div class="menu">
-        <button><a href="main.html">Accueil</a></button>
-        <button><a href="">Evenements</a></button>
-        <button><a href="" id="active">Explorer</a></button>
-        <button><a href="">Lieux</a></button>
-        <button><a href="">Magazine</a></button>
-    </div>
-    <div class="search-bar">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30" class="search-icon">
-            <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"></path>
-        </svg>
-        <input type="text" placeholder="Rechercher...">
+    <nav aria-label="Navigation principale">
+      <ul class="menu">
+        <li><a href="main.html">Accueil</a></li>
+        <li><a href="#">Evenements</a></li>
+        <li><a href="#" id="active">Explorer</a></li>
+        <li><a href="#">Lieux</a></li>
+        <li><a href="#">Magazine</a></li>
+      </ul>
+    </nav>
+    <div>
+      <form role="search" method="get" action="/recherche">
+        <label for="search-input">Rechercher :</label>
+        <input
+          type="search"
+          id="search-input"
+          name="q"
+          placeholder="Tapez votre recherche ici"
+          autocomplete="search"
+        />
+        <button type="submit">Rechercher</button>
+      </form>
     </div>
   </header>
 
-  <section class="welcome-section2">
-    <h2 class="welcome-title">Explorez les cultures</h2>
-    <p>Découvrez la richesse et la diversité des traditions culturelles du monde</p>
-  </section>
-  <section class="main-content">
-    
-  
-    <!-- Section des filtres -->
-    <section class="filter-section">
-      <h3>Filtres</h3>
-      
-      <!-- Type de contenus -->
-      <div class="filter-group">
-        <h4>Type de contenus</h4>
-        <label>
-          <input type="checkbox" name="content-type" value="articles"> Articles
-        </label>
-        <label>
-          <input type="checkbox" name="content-type" value="videos"> Vidéos
-        </label>
-        <label>
-          <input type="checkbox" name="content-type" value="podcasts"> Podcasts
-        </label>
-        <label>
-            <input type="checkbox" name="content-type" value="photos"> Galeries photos
-        </label>
-      </div>
-    
-      <!-- Région -->
-      <div class="filter-group">
-        <h4>Région</h4>
-        <label for="region">Choisissez une région :</label>
-        <select id="region" name="region">
-            <option value="toutes les régions">Toutes les régions</option>
-            <option value="europe">Europe</option>
-            <option value="asie">Asie</option>
-            <option value="afrique">Afrique</option>
-            <option value="amerique">Amérique</option>
-        </select>
-      </div>
-    
-      <!-- Thématique -->
-      <div class="filter-group">
-        <h4>Thématique</h4>
-        <label>
-          <input type="checkbox" name="theme" value="art"> Art 
-        </label>
-        <label>
-          <input type="checkbox" name="theme" value="musique"> Musique
-        </label>
-        <label>
-          <input type="checkbox" name="theme" value="gastronomie"> Gastronomie
-        </label>
-        <label>
-          <input type="checkbox" name="theme" value="histoire"> Histoire
-        </label>
-      </div>
-    
-      <button type="submit">Appliquer</button>
-      
+  <main>
+    <section class="welcome-section2" aria-labelledby="explore-title">
+      <h2 id="explore-title" class="welcome-title">Explorez les cultures</h2>
+      <p>Découvrez la richesse et la diversité des traditions culturelles du monde</p>
     </section>
-    <!-- Section centrale (à ajouter plus tard) -->
-    <div class="central-section">
-        <h2>Section centrale</h2>
-        <p>Contenu principal ici...</p>
-      </div>
-  </section>
+    
+    <div class="main-content">
+      <!-- Section des filtres -->
+      <aside class="filter-section">
+        <h3 id="filters-heading">Filtres</h3>
+        
+        <form aria-labelledby="filters-heading">
+          <!-- Type de contenus -->
+          <fieldset class="filter-group">
+            <legend>Type de contenus</legend>
+            <div>
+              <input type="checkbox" id="articles" name="content-type" value="articles">
+              <label for="articles">Articles</label>
+            </div>
+            <div>
+              <input type="checkbox" id="videos" name="content-type" value="videos">
+              <label for="videos">Vidéos</label>
+            </div>
+            <div>
+              <input type="checkbox" id="podcasts" name="content-type" value="podcasts">
+              <label for="podcasts">Podcasts</label>
+            </div>
+            <div>
+              <input type="checkbox" id="photos" name="content-type" value="photos">
+              <label for="photos">Galeries photos</label>
+            </div>
+          </fieldset>
+        
+          <!-- Région -->
+          <fieldset class="filter-group">
+            <legend>Région</legend>
+            <label for="region">Choisissez une région :</label>
+            <select id="region" name="region">
+              <option value="toutes les régions">Toutes les régions</option>
+              <option value="europe">Europe</option>
+              <option value="asie">Asie</option>
+              <option value="afrique">Afrique</option>
+              <option value="amerique">Amérique</option>
+            </select>
+          </fieldset>
+        
+          <!-- Thématique -->
+          <fieldset class="filter-group">
+            <legend>Thématique</legend>
+            <div>
+              <input type="checkbox" id="art-traditionnel" name="theme" value="art traditionnel">
+              <label for="art-traditionnel">Art traditionnel</label>
+            </div>
+            <div>
+              <input type="checkbox" id="musique" name="theme" value="musique">
+              <label for="musique">Musique</label>
+            </div>
+            <div>
+              <input type="checkbox" id="gastronomie" name="theme" value="gastronomie">
+              <label for="gastronomie">Gastronomie</label>
+            </div>
+            <div>
+              <input type="checkbox" id="danse" name="theme" value="danse">
+              <label for="danse">Danse</label>
+            </div>
+            <div>
+              <input type="checkbox" id="traditions" name="theme" value="traditions">
+              <label for="traditions">Traditions</label>
+            </div>
+          </fieldset>
+        
+          <div class="filter-actions">
+            <button type="reset" class="btn outline-btn">Réinitialiser les filtres</button>
+            <button type="submit" class="btn primary-btn">Appliquer les filtres</button>
+          </div>
+        </form>
+      </aside>
+      
+      <!-- Section centrale -->
+      <section class="central-section" aria-labelledby="results-heading">
+        <h3 id="results-heading" class="visually-hidden">Résultats de recherche</h3>
+        
+        <!-- Partie pour trier -->
+        <div class="sorting-section">
+          <label for="sort-select">Trier par</label>
+          <select id="sort-select" name="sort-option">
+            <option value="plus récent">Plus récent</option>
+            <option value="plus-ancien">Plus ancien</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+          
+          <div class="display-options">
+            <span id="display-label">Affichage:</span>
+            <div class="view-controls" role="group" aria-labelledby="display-label">
+              <button type="button" class="icon-container" aria-label="Affichage en grille">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#777777" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z"></path>
+                </svg>
+              </button>
+              <button type="button" class="icon-container2" aria-label="Affichage en liste">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#777777" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
+                </svg>
+              </button>
+            </div>
+            <span class="result-count" aria-live="polite">12 résultats</span>
+          </div>
+        </div>
+      
+        <!-- Grille de contenu -->
+        <div class="content-grid">
+          <article class="content-block">
+            <span class="category-header">GASTRONOMIE</span>
+            <div class="article-content">
+              <h4 class="article-title">Cuisine japonaise : L'art du washoku</h4>
+              <div class="article-meta">
+                <span>Par Noé Lechat • <time datetime="2025-03-07">7 mars 2025</time></span>
+                <a href="#" class="article-link">Article</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="content-block">
+            <span class="category-header2">TRADITIONS</span>
+            <div class="article-content">
+              <h4 class="article-title">La cérémonie du thé marocaine</h4>
+              <div class="article-meta">
+                <span>Par Edgar Couthouis • <time datetime="2025-04-04">04 avril 2025</time></span>
+                <a href="#" class="article-link">Galeries photo</a>
+              </div>
+            </div>
+          </article>
+          
+          <article class="content-block">
+            <span class="category-header">GASTRONOMIE</span>
+            <div class="article-content">
+              <h4 class="article-title">Cuisine indienne : Le poulet tandori</h4>
+              <div class="article-meta">
+                <span>Par Louka Gennies • <time datetime="2025-03-03">3 mars 2025</time></span>
+                <a href="#" class="article-link">Article</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-block">
+            <span class="category-header2">TRADITIONS</span>
+            <div class="article-content">
+              <h4 class="article-title">Art traditionnel chinoise</h4>
+              <div class="article-meta">
+                <span>Par Arthur Baudet • <time datetime="2025-02-18">18 février 2025</time></span>
+                <a href="#" class="article-link">Galeries photo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <nav class="pagination" aria-label="Pagination">
+          <a href="#" class="page-item active" aria-current="page" aria-label="Page 1">1</a>
+          <a href="#" class="page-item" aria-label="Page 2">2</a>
+          <a href="#" class="page-item" aria-label="Page 3">3</a>
+          <span class="page-item-vide" aria-hidden="true">...</span>
+          <a href="#" class="page-item" aria-label="Page 8">8</a>
+          <a href="#" class="page-item next" aria-label="Page suivante">Suivant</a>
+        </nav>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
