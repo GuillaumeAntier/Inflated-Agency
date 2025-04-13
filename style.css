@@ -348,6 +348,144 @@ body {
     background-color: var(--gray);
     color: var(--dark-gray);
 }
+
+.recent-articles-section {
+    margin-top: 40px;
+  }
+  
+  .articles-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .article-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 32%;
+    height: auto;
+  }
+  
+  .article-img {
+    height: 180px;
+    position: relative;
+  }
+  
+  .article-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+  
+  .article-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 15px 10px;
+  }
+  
+  .article-description {
+    font-size: 14px;
+    color: var(--dark-gray);
+    padding: 0 15px 15px;
+    line-height: 1.4;
+  }
+  
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px 15px;
+    border-top: 1px solid var(--gray);
+  }
+  
+  .article-author {
+    font-size: 12px;
+    color: var(--text-gray);
+  }
+  
+  .article-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  /* Magazine Card */
+  .magazine-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    width: 32%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .magazine-content {
+    text-align: center;
+  }
+  
+  .magazine-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+  }
+  
+  .arrow-icon {
+    font-size: 24px;
+    color: var(--dark-gray);
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .newsletter-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  
+  .newsletter-input {
+    flex: 1;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+  
+  .newsletter-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
     /* Footer */
     .footer {
         display: flex;
@@ -358,6 +496,7 @@ body {
         background-color: var(--white);
         border-top: 1px solid var(--gray);
         position: relative;
+        margin-top: 40px;
         margin-right: -3%;
         margin-left: -3%;
         z-index: 100;
