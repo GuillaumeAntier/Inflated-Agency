@@ -11,35 +11,45 @@
 <body>
   <a href="#main" class="skip-link">Aller au contenu principal</a>
   
-  <header class="header" role="banner">
-    <div class="logo">
-      <div class="logo-circle" aria-hidden="true"></div>
-      <h1 class="app-name">CultuRéseau</h1>
-    </div>
-    <nav aria-label="Navigation principale">
-      <ul class="menu">
-        <li><a href="#" id="active">Accueil</a></li>
-        <li><a href="">Evenements</a></li>
-        <li><a href="/Explore.html">Explorer</a></li>
-        <li><a href="">Lieux</a></li>
-        <li><a href="">Magazine</a></li>
-      </ul>
-    </nav>
-    <div>
-      <form role="search" method="get" action="/recherche">
-        <label for="search-input">Rechercher :</label>
-        <input
-          type="search"
-          id="search-input"
-          name="q"
-          placeholder="Tapez votre recherche ici"
-          autocomplete="off"
-          aria-label="Rechercher sur le site"
-        />
-        <button type="submit">Rechercher</button>
-      </form>
-    </div>
-  </header>
+ <!-- Modifications à apporter à votre HTML dans la section header -->
+<header class="header" role="banner">
+  <div class="logo">
+    <div class="logo-circle" aria-hidden="true"></div>
+    <h1 class="app-name">CultuRéseau</h1>
+  </div>
+  
+  <!-- Bouton menu burger pour mobile -->
+  <button class="burger-menu" aria-expanded="false" aria-controls="main-nav" aria-label="Menu principal">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
+  
+  <nav aria-label="Navigation principale" id="main-nav" class="nav-container">
+    <ul class="menu">
+      <li><a href="#" id="active">Accueil</a></li>
+      <li><a href="">Evenements</a></li>
+      <li><a href="/Explore.html">Explorer</a></li>
+      <li><a href="">Lieux</a></li>
+      <li><a href="">Magazine</a></li>
+    </ul>
+  </nav>
+  
+  <div class="search-container">
+    <form role="search" method="get" action="/recherche">
+      <label for="search-input">Rechercher :</label>
+      <input
+        type="search"
+        id="search-input"
+        name="q"
+        placeholder="Tapez votre recherche ici"
+        autocomplete="off"
+        aria-label="Rechercher sur le site"
+      />
+      <button type="submit">Rechercher</button>
+    </form>
+  </div>
+</header>
 
   <main id="main">
     <section class="welcome-section">
@@ -247,43 +257,6 @@
     </div>
   </footer>
 
-  <script>
-    document.querySelectorAll('form').forEach(form => {
-      form.addEventListener('submit', function(event) {
-        if (form.classList.contains('newsletter-form')) {
-          const emailInput = document.getElementById('newsletter-email');
-          const errorMessage = document.getElementById('email-error');
-          const confirmation = document.querySelector('.form-confirmation');
-          
-          if (!emailInput.validity.valid) {
-            event.preventDefault();
-            if (emailInput.validity.valueMissing) {
-              errorMessage.textContent = 'Veuillez entrer une adresse email';
-            } else if (emailInput.validity.typeMismatch) {
-              errorMessage.textContent = 'Veuillez entrer une adresse email valide';
-            }
-          } else {
-            event.preventDefault();
-            errorMessage.textContent = '';
-            emailInput.value = '';
-            confirmation.textContent = 'Merci de votre inscription à notre newsletter!';
-            setTimeout(() => {
-              confirmation.textContent = '';
-            }, 5000);
-          }
-        }
-      });
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-user');
-      }
-    });
-    
-    document.addEventListener('mousedown', function() {
-      document.body.classList.remove('keyboard-user');
-    });
-  </script>
+  <script src="./index.js" defer></script>
 </body>
 </html>

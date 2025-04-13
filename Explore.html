@@ -12,34 +12,45 @@
   <a href="#main" class="skip-link">Aller au contenu principal</a>
 
   <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <div class="logo-circle" aria-hidden="true"></div>
-      <h1 class="app-name">CultuRéseau</h1>
-    </div>
-    <nav aria-label="Navigation principale">
-      <ul class="menu">
-        <li><a href="main.html">Accueil</a></li>
-        <li><a href="#">Evenements</a></li>
-        <li><a href="#" id="active">Explorer</a></li>
-        <li><a href="#">Lieux</a></li>
-        <li><a href="#">Magazine</a></li>
-      </ul>
-    </nav>
-    <div>
-      <form role="search" method="get">
-        <label for="search-input">Rechercher :</label>
-        <input
-          type="search"
-          id="search-input"
-          name="q"
-          placeholder="Tapez votre recherche ici"
-          autocomplete="search"
-        />
-        <button type="submit">Rechercher</button>
-      </form>
-    </div>
-  </header>
+  <!-- Modifications à apporter à votre HTML dans la section header -->
+<header class="header" role="banner">
+  <div class="logo">
+    <div class="logo-circle" aria-hidden="true"></div>
+    <h1 class="app-name">CultuRéseau</h1>
+  </div>
+  
+  <!-- Bouton menu burger pour mobile -->
+  <button class="burger-menu" aria-expanded="false" aria-controls="main-nav" aria-label="Menu principal">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
+  
+  <nav aria-label="Navigation principale" id="main-nav" class="nav-container">
+    <ul class="menu">
+      <li><a href="/main.html">Accueil</a></li>
+      <li><a href="">Evenements</a></li>
+      <li><a href="/Explore.html" id="active">Explorer</a></li>
+      <li><a href="">Lieux</a></li>
+      <li><a href="">Magazine</a></li>
+    </ul>
+  </nav>
+  
+  <div class="search-container">
+    <form role="search" method="get" action="/recherche">
+      <label for="search-input">Rechercher :</label>
+      <input
+        type="search"
+        id="search-input"
+        name="q"
+        placeholder="Tapez votre recherche ici"
+        autocomplete="off"
+        aria-label="Rechercher sur le site"
+      />
+      <button type="submit">Rechercher</button>
+    </form>
+  </div>
+</header>
 
   <main>
     <section class="welcome-section2" aria-labelledby="explore-title">
@@ -210,4 +221,5 @@
     </div>
   </main>
 </body>
+<script src="./index.js" defer></script>
 </html>
