@@ -463,6 +463,19 @@
   .content-grid {
       grid-template-columns: 1fr;
   }
+  
+  /* Added improvements for tablet view */
+  .filter-group {
+      margin-bottom: 10%;
+  }
+  
+  .sorting-section {
+      padding: 15px;
+  }
+  
+  .sorting-section select {
+      width: 30%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -489,6 +502,71 @@
       width: 40px;
       height: 40px;
       font-size: 16px;
+  }
+  
+  /* Added improvements for mobile view */
+  .welcome-section2 {
+      padding: 15px 20px;
+      margin: 2% 0;
+  }
+  
+  .filter-section h3 {
+      font-size: 1.1em;
+  }
+  
+  .filter-group legend {
+      font-size: 1em;
+  }
+  
+  .icon-container, .icon-container2 {
+      width: 35px;
+      height: 35px;
+  }
+  
+  .article-title {
+      font-size: 1.1em;
+  }
+  
+  .article-meta {
+      flex-direction: column;
+      gap: 5px;
+  }
+  
+  .category-header, .category-header2 {
+      padding: 50px 15px;
+  }
+}
+
+/* Added extra small device support */
+@media (max-width: 400px) {
+  .page-item {
+      width: 35px;
+      height: 35px;
+      font-size: 14px;
+  }
+  
+  .page-item.next {
+      padding: 0 10px;
+      font-size: 14px;
+  }
+  
+  .filter-group input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+  }
+  
+  .filter-group input[type="checkbox"]:checked::after {
+      width: 24px;
+      height: 24px;
+  }
+  
+  .search-bar input {
+      padding: 8px 8px 8px 35px;
+  }
+  
+  .btn {
+      padding: 8px 12px;
+      font-size: 0.9em;
   }
 }
 
