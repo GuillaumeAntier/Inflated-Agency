@@ -535,7 +535,7 @@ form[role="search"] button:focus {
   
 .article-author {
     font-size: 12px;
-    color: var(--text-gray);
+    color: var(--text-black);
 }
   
 .article-link {
